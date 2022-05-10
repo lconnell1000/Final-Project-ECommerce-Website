@@ -27,11 +27,13 @@ const Arrow = styled.div`
     margin: auto;
     cursor: pointer;
     opacity: 0.75;
+    z-index: 2;
 `
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transform: translateX(${props=>props.slideIndex * -100})
+    transition: all 2s ease;
+    transform: translateX(${props=>props.slideIndex * -100}vw)
 `
 
 const Slide = styled.div`
