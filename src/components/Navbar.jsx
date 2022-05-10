@@ -67,7 +67,7 @@ const Navbar = () => {
                 </SearchContainer>
             </Left>
             <Center>
-                <Logo>ECO DIED CLOTHING</Logo>
+                <Logo>AGAIN CLOTHING</Logo>
             </Center>
             <Right>
                 <Menu>Register</Menu>

@@ -7,9 +7,6 @@ const Container = styled.div`
     display: flex;
     position: relative;
 `
-const Wrapper = styled.div`
-    height: 100%;
-`
 
 const Arrow = styled.div`
     width: 50px;
@@ -28,7 +25,36 @@ const Arrow = styled.div`
     cursor: pointer;
     opacity: 0.75;
 `
+const Wrapper = styled.div`
+    height: 100%;
+`
 
+const Slide = styled.div`
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+`
+const ImgContainer = styled.div`
+    height: 100%;
+    flex: 1
+`
+const Image = styled.img`
+    height: 80%;
+`
+const InfoContainer = styled.div`
+    flex: 1;
+    padding: 50px;
+`
+const Title = styled.h1`
+
+`
+const Description = styled.p`
+
+`
+const Button = styled.button`
+
+`
 const Slider = () => {
   return (
     <Container>
@@ -36,7 +62,16 @@ const Slider = () => {
             <ArrowLeftRounded />
         </Arrow>
         <Wrapper>
-            
+        <Slide>
+        <ImgContainer>
+        <Image src="https://i.ibb.co/mck9rQK/milad-fakurian-K4-Fgcyy-FXC8-unsplash.jpg"/>
+        </ImgContainer>
+        <InfoContainer>
+            <Title>WINTER SALE</Title>
+            <Description>SPEND MORE THAN $150 AND GET FREE SHIPPING</Description>
+            <Button>SHOP NOW</Button>
+        </InfoContainer>
+        </Slide>
         </Wrapper>
         <Arrow direction="right">
             <ArrowRightRounded />
