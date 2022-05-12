@@ -97,7 +97,7 @@ const Footer = () => {
             <ContactItem>
                 <Phone style={{marginRight:"10px"}}/>+61 423 633 515</ContactItem>
             <ContactItem>
-                <MailOutline style={{marginRight:"10px"}}/>fionaconnell@gmail.com</ContactItem>
+                <MailOutline style={{marginRight:"10px"}}/>fionaconnell1000@gmail.com</ContactItem>
             <Payment src="https://i.ibb.co/Qfvn4z6/payment.png"/>
         </Right>
     </Container>

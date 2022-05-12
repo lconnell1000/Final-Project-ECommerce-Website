@@ -32,7 +32,7 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
     height: 100%;
     display: flex;
-    transition: all 2s ease;
+    transition: all 0.75s ease;
     transform: translateX(${props=>props.slideIndex * -100}vw)
 `
 
@@ -45,10 +45,11 @@ const Slide = styled.div`
 `
 const ImgContainer = styled.div`
     height: 100%;
-    flex: 1
+    flex: 1;
+    padding-top: 9%;
 `
 const Image = styled.img`
-    height: 80%;
+    height: 85%;
 `
 const InfoContainer = styled.div`
     flex: 1;
