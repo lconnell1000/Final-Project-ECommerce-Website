@@ -1,8 +1,10 @@
 import { Facebook, Instagram, MailOutline, Phone, RoomOutlined } from "@material-ui/icons"
 import styled from "styled-components"
+import { mobile } from "../responsive"
 
 const Container = styled.div`
     display: flex;
+    ${mobile({ flexDirection: "column" })}
 `
 const Left = styled.div`
     flex: 1;
@@ -35,6 +37,7 @@ const SocialIcon = styled.div`
 const Center = styled.div`
     flex: 1;
     padding: 15px;
+    ${mobile({ display: "none" })}
 `
 const Title = styled.h3`
     margin-bottom: 30px;
@@ -53,6 +56,7 @@ const ListItem = styled.li`
 const Right = styled.div`
     flex: 1;
     padding: 15px;
+    ${mobile({ backgroundColor: "#fff8f8" })}
 `
 const ContactItem = styled.div`
     margin-bottom: 15px;
@@ -66,7 +70,7 @@ const Footer = () => {
   return (
     <Container>
         <Left>
-            <Logo>AGAIN CLOTHING.</Logo>
+            <Logo>AGAIN.</Logo>
             <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quis reprehenderit facere laudantium aut. Sequi beatae quisquam aperiam et earum, odio quaerat, esse est cum corrupti culpa unde consectetur corporis.</Description>
             <SocialContainer>
                 <SocialIcon color="3B5999">
