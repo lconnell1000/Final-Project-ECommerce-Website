@@ -6,7 +6,7 @@ const CartSchema = new Schema(
         type:String, 
         required:true,
         },
-        Products: [
+        products: [
             {
             productId:{
                 type:String,
@@ -18,9 +18,7 @@ const CartSchema = new Schema(
         }
         ],
             
-        },
-
-    }, {timestamps: true}
+     }, {timestamps: true}
 );
 
 const Cart = model("Cart", CartSchema);
