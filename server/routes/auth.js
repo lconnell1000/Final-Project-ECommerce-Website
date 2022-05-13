@@ -31,14 +31,16 @@ router.post("/login", async (req,res) => {
     CryptoJS.AES.decrypt
     (user.password, process.env.PASS_SECRET);
 
-    const decryptPassword = hashedPass.toString(CryptoJS.enc.Utf8);
+    const hashPassword = hashedPass.toString(CryptoJS.enc.Utf8);
 
-    decryptPassword !==req.body.password && res.status(401).json("Incorrect Password");
+    const inputPassword = req.body.password;
+
+    hashPassword !==inputPassword && res.status(401).json("Incorrect Password");
 
     const accessToken = jwt.sign({
         id:user._id, 
         isAdmin: user.isAdmin,
-    }, process.env.JWT_SECRET, {expiresIn:"1d"});
+    }, process.env.JWT_SECRET, {expiresIn:"3d"});
 
     const { password, ...allExceptPass } = user._doc;
 
