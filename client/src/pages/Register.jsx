@@ -4,7 +4,7 @@ const Container = styled.div`
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.8)),
-     url(https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280219323_5838214939539660_9020665931602085856_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=0debeb&_nc_ohc=iGgdNORzrOAAX_ylvrj&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-E3KegrxB70ZpT_fMp25P84lVxSyCWHTCztAqowI8WCA&oe=62814364),
+     url(https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280219323_5838214939539660_9020665931602085856_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=0debeb&_nc_ohc=DYAG2dedQLUAX-rX90G&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-VvfbTbD98_t61ZaEU39hz-k2PrwUsNcbP-M0GdIKNUw&oe=62873224),
      center;
      display: flex;
      align-items: flex-start;

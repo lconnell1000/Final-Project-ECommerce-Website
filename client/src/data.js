@@ -15,7 +15,7 @@ export const sliderItems = [
     },
     {
         id: 3,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280097785_5838118432882644_7636646076885974707_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=0debeb&_nc_ohc=OKkTTbbOhiMAX9iNXka&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8UdMLJUuLvX8zJS5oPNE-cpNyh20-bWss0wEJQ_zZbSg&oe=6280FD10",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280764211_5838119052882582_592450467890474680_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=0debeb&_nc_ohc=JH86D5Y6HjEAX-LTrXM&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_Lo6FQoudRLesOqc4bd-EEmbh_A9f-tOG9c_-i2Hyhmg&oe=6287842C",
         title: "NEW ITEMS",
         description: "BROWSE OUR NEWEST ITEMS",
         bg: "ADD8E6",
@@ -25,7 +25,7 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280261791_5838118562882631_1356182101440161965_n.jpg?_nc_cat=107&ccb=1-6&_nc_sid=0debeb&_nc_ohc=pdfy90IpEqcAX9EbCHf&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8LvT2sECDWEkb8BrEU9foCgtAYagbSeh2jW86MYl9Y5Q&oe=6281C9C2",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280261791_5838118562882631_1356182101440161965_n.jpg?_nc_cat=107&ccb=1-6&_nc_sid=0debeb&_nc_ohc=-L8uoEEJ724AX-uxmkw&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9bgyuCcL_ePRzORX8eP-CH-oGAPAD071PKSNStGB6aIw&oe=6287B882",
         title: "DRESSES",
     },
     {
@@ -35,12 +35,12 @@ export const categories = [
     },
     {
         id: 3,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280097785_5838118432882644_7636646076885974707_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=0debeb&_nc_ohc=OKkTTbbOhiMAX9iNXka&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8UdMLJUuLvX8zJS5oPNE-cpNyh20-bWss0wEJQ_zZbSg&oe=6280FD10",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280097785_5838118432882644_7636646076885974707_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=0debeb&_nc_ohc=P65VZCyLl_IAX8mNDkz&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-v25OnvDEPoJFEEH_xikgBXzOvFKw5k6XAGXDlZTlibg&oe=6286EBD0",
         title: "CARTIGANS",
     },
     {
         id: 4,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280017010_5838118649549289_2406138824416824332_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=0debeb&_nc_ohc=ImghfQG1OBcAX-bbzpT&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9uNvdGvO-J7SwnBxMfBUhtkY1AOU_ZUQ22hHzXL09o3w&oe=6281F6FD",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280017010_5838118649549289_2406138824416824332_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=0debeb&_nc_ohc=kisDYDd-JMUAX9Cpxd1&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8ADTWD7EYoVGWM86rYuR-dskA_a33FSNbiEnTiew_JnA&oe=6285EB7D",
         title: "PANTS",
     }
 ]
@@ -48,23 +48,23 @@ export const categories = [
 export const popularProducts = [
     {
         id: 1,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280048526_5838119066215914_4967331099053599431_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=jmm1VgYH6QQAX_kbRzd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-jHJZJyJce3TLXfY3CsYwWnATcz1RulE1NRpB4I_41hA&oe=6280FC0A",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280048526_5838119066215914_4967331099053599431_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=QO8nLitMhGgAX80dCKj&_nc_ht=scontent.fadl5-1.fna&oh=00_AT98i-OalVSY47Uo3Jzr4jOkR4fF3wszvwboVAjueAzR0Q&oe=6286EACA",
     },
     {
         id: 2,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280764211_5838119052882582_592450467890474680_n.jpg?_nc_cat=105&ccb=1-6&_nc_sid=0debeb&_nc_ohc=qvRN5Tz1xqUAX-vQRT7&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8ZXVG4fNcHxQM3ZadSS4Qfd7eFZbr99T5v3PSlTLrhtw&oe=6281956C",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280261791_5838118562882631_1356182101440161965_n.jpg?_nc_cat=107&ccb=1-6&_nc_sid=0debeb&_nc_ohc=-L8uoEEJ724AX-uxmkw&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9bgyuCcL_ePRzORX8eP-CH-oGAPAD071PKSNStGB6aIw&oe=6287B882",
     },
     {
         id: 3,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/279864429_5838118709549283_1040737419227905262_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=0debeb&_nc_ohc=1F87VKnNzB0AX8WQlmR&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8WLwQjBpX95sLvG2KU6SfFBs3_s0_7foqBVCnYvl-DyQ&oe=62813EEA",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/279864429_5838118709549283_1040737419227905262_n.jpg?_nc_cat=111&ccb=1-6&_nc_sid=0debeb&_nc_ohc=86gXpLieYVoAX-pEiTE&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9lbBjBAh9oF0dw5-nnPdfOs1Gdkx9bsZ9PbREO_xUZPA&oe=62872DAA",
     },
     {
         id: 4,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280616739_5838118519549302_5001059397738356256_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=0debeb&_nc_ohc=Rx2l7RRgw8wAX8n9aUO&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9V7Vt7H_idxhj-kbkqJrr64B79nSl1d7OjgiqFK4fgdA&oe=62817871",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280616739_5838118519549302_5001059397738356256_n.jpg?_nc_cat=110&ccb=1-6&_nc_sid=0debeb&_nc_ohc=vSg08Il8IL8AX9o7JmM&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-k7r5ddT9-iVHy7qrBFtJinaxUVWlxEHZAeqg0hvtRAg&oe=62876731",
     },
     {
         id: 5,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280496227_5838118919549262_6496081532584295026_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=0debeb&_nc_ohc=qoHc37bQZvEAX_faQQe&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_HbPpky1VPGeHm-WWObYtox5AImXA5wNQe0Fs2rboqaQ&oe=62811D5C",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280496227_5838118919549262_6496081532584295026_n.jpg?_nc_cat=109&ccb=1-6&_nc_sid=0debeb&_nc_ohc=pp0u-rGEnUwAX8w-sX3&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9kNlgPhW3r9tE2ChRIV-iANu6xHuthHBKJ_REfHgT85g&oe=62870C1C",
     },
     {
         id: 6,
@@ -72,10 +72,10 @@ export const popularProducts = [
     },
     {
         id: 7,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280300779_5838118489549305_227134413339941244_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=TjFybtchaEQAX_oDB_6&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_E9IQmgTzoCJQPnqo5vbyyAtl-Ecb8O4DsnXMgf502Dw&oe=62812F29",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280255621_5838118972882590_7755472351161852902_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=0debeb&_nc_ohc=PDm3ImEoOmYAX8mcBQB&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_siMmQzQRBUpQZ_wIx7Hkkh53SEzWMNCRgw4riqt7Bzg&oe=62879BF5",
     },
     {
         id: 8,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280255621_5838118972882590_7755472351161852902_n.jpg?_nc_cat=104&ccb=1-6&_nc_sid=0debeb&_nc_ohc=igR7aQSkoAcAX-ttX_Y&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_s3khuqbw2COiQ9Azch8LpSBPtOEGrx_71W7tYjfQGYg&oe=6281AD35",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280300779_5838118489549305_227134413339941244_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=rgn9rO5X1T8AX85lDRQ&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_Wqy6vc-H58_HynqrVHAQlHLejhQzE1YEXnmI2ub-oAA&oe=62871DE9",
     }
 ]
