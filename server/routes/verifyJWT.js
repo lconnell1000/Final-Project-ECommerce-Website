@@ -4,9 +4,9 @@ const verifyToken = (req, res, next) => {
   const authHeader = req.headers.token;
   if (authHeader) {
     const token = authHeader.split(" ")[1];
-    console.log("jwt pass: " + process.env.JWT_SECRET);
-    console.log("token " + token);
-    const debug = jwt.verify(token, process.env.JWT_SECRET);
+   // console.log("jwt pass: " + process.env.JWT_SECRET);
+   // console.log("token " + token);
+   // const debug = jwt.verify(token, process.env.JWT_SECRET);
     console.log("debug" + debug);
     jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
       if (err) 

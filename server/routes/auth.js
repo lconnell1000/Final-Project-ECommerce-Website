@@ -38,7 +38,7 @@ router.post("/login", async (req,res) => {
     hashPassword !==inputPassword && res.status(401).json("Incorrect Password");
 
     const accessToken = jwt.sign({
-        id:user._id, 
+        id: user._id, 
         isAdmin: user.isAdmin,
     }, process.env.JWT_SECRET, {expiresIn:"2d"});
 
