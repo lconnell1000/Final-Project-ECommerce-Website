@@ -7,7 +7,7 @@ const verifyToken = (req, res, next) => {
    // console.log("jwt pass: " + process.env.JWT_SECRET);
    // console.log("token " + token);
    // const debug = jwt.verify(token, process.env.JWT_SECRET);
-    console.log("debug" + debug);
+   // console.log("debug" + debug);
     jwt.verify(token, process.env.JWT_SECRET, (err, user) => {
       if (err) 
           //console.log("error: " + err);
@@ -26,7 +26,7 @@ const verifyTokenAndAuthorization = (req, res, next) => {
     if (req.user.id === req.params.id || req.user.isAdmin) {
       next();
     } else {
-      res.status(403).json("You are not alowed to do that!");
+      res.status(403).json("You are not authorized to do that!");
     }
   });
 };
