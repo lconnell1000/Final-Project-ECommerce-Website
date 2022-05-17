@@ -5,8 +5,9 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { Add, Remove } from "@material-ui/icons";
 import { mobile } from "../responsive";
-import { Uselocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { publicRequest } from "../requestMethods";
 
 const Container = styled.div`
 
@@ -75,6 +76,7 @@ const AmountConatiner = styled.div`
   display: flex;
   align-items: center;
   font-weight: 700;
+  cursor: pointer;
 `
 const Amount = styled.span`
   width: 30px;
@@ -101,42 +103,62 @@ const Product = () => {
   const location = useLocation();
   const id = location.pathname.split("/")[2];
   const[product,setProduct] = useState({});
+  const[quantity, setQuantity] = useState(1);
+  const [size, setSize] = useState("");
 
   useEffect(()=>{
     const getProduct = async () => {
       try {
-        const res = axios.
+        const res = await publicRequest.get("/products/find/" + id);
+        setProduct(res.data)
       }catch{}
     }
-  },[id])
+    getProduct();
+  },[id]);
+
+  const handleQuantity = (type) => {
+    if (type === "dec" ){
+      quantity > 1 && setQuantity(quantity - 1)
+    } else {
+      setQuantity(quantity + 1)
+    }
+  };
+
+  const handleClick = () => {
+    //update cart
+  }
   return (
     <Container>
         <Navbar />
         <Announcement />
         <Wrapper>
           <ImgContainer>
-          <Image src="https://i.ibb.co/mTKQbPQ/r-n-tyfq-OL1-FAQc-unsplash.jpg" />
+          <Image src={product.img} />
           </ImgContainer>
           <InfoContainer>
-            <Title>Avocado Dyed Dress</Title>
-            <Description>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nihil consectetur magnam possimus, aliquam voluptatum non expedita minima numquam nam quod laborum ullam eos libero sunt earum fuga cupiditate exercitationem.
+            <Title>{product.title}</Title>
+            <Description>
+              {product.description}
             </Description>
-            <Price>$ 60 </Price>
+            <Price>$ {product.price}
+            </Price>
             <FilterContainer>
               <Filter>
                 <FilterTitle>Size</FilterTitle>
-                <FilterSize>
-                  <FilterSizeOption>M</FilterSizeOption>
+                <FilterSize onChange={(e) => setSize(e.target.value)}>
+                  {product.size?.map((s) => (
+                   <FilterSizeOption key={s}>{s}</FilterSizeOption> 
+                  ))} 
                 </FilterSize>
               </Filter>
             </FilterContainer>
             <AddContainer>
               <AmountConatiner>
-                <Remove/>
-                <Amount>1</Amount>
-                <Add/>
+                <Remove onClick={() => handleQuantity("dec")} />
+                <Amount>{quantity}</Amount>
+                <Add  onClick={() => handleQuantity("inc")} />
               </AmountConatiner>
-              <Button>ADD TO CART</Button>
+              <Button onClick={handleClick}>ADD TO CART</Button>
             </AddContainer>
           </InfoContainer>
         </Wrapper>
