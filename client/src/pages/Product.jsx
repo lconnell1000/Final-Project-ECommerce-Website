@@ -1,10 +1,12 @@
-import styled from "styled-components"
-import Navbar from "../components/Navbar"
-import Announcement from "../components/Announcement"
-import Newsletter from "../components/Newsletter"
-import Footer from "../components/Footer"
-import { Add, Remove } from "@material-ui/icons"
-import { mobile } from "../responsive"
+import styled from "styled-components";
+import Navbar from "../components/Navbar";
+import Announcement from "../components/Announcement";
+import Newsletter from "../components/Newsletter";
+import Footer from "../components/Footer";
+import { Add, Remove } from "@material-ui/icons";
+import { mobile } from "../responsive";
+import { Uselocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const Container = styled.div`
 
@@ -96,6 +98,17 @@ const Button = styled.button`
   }
 `
 const Product = () => {
+  const location = useLocation();
+  const id = location.pathname.split("/")[2];
+  const[product,setProduct] = useState({});
+
+  useEffect(()=>{
+    const getProduct = async () => {
+      try {
+        const res = axios.
+      }catch{}
+    }
+  },[id])
   return (
     <Container>
         <Navbar />

@@ -72,7 +72,7 @@ export const popularProducts = [
     },
     {
         id: 6,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280105400_5838118722882615_348812896977848665_n.jpg?_nc_category=100&ccb=1-6&_nc_sid=0debeb&_nc_ohc=sT9u1h6raJgAX_ksVTt&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8l2ivruOMwWmyIYDO2gOvYi3pvEPiLGy83dN51W3PmLw&oe=62824BB5",
+        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280105400_5838118722882615_348812896977848665_n.jpg?_nc_cat=100&ccb=1-6&_nc_sid=0debeb&_nc_ohc=d0mQU3D0PTcAX_gpuAk&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-cdvC4imXXieg1ireNT74Xi4mXPPSZbvblluxqzh4_5Q&oe=62883A75",
     },
     {
         id: 7,
