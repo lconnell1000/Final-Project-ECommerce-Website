@@ -110,6 +110,8 @@ const Product = () => {
   const [size, setSize] = useState("");
   const dispatch = useDispatch();
 
+  const sizeValue =  size || (product.size && product.size[0]);
+
   useEffect(()=>{
     const getProduct = async () => {
       try {
@@ -130,7 +132,7 @@ const Product = () => {
 
   const handleClick = () => {
     dispatch(
-      addProduct({ ...product, quantity, size })
+      addProduct({ ...product, quantity, size: sizeValue })
     );
   };
   return (
@@ -151,7 +153,7 @@ const Product = () => {
             <FilterContainer>
               <Filter>
                 <FilterTitle>Size</FilterTitle>
-                <FilterSize onChange={(e) => setSize(e.target.value)}>
+                <FilterSize value={sizeValue} onChange={(e) => setSize(e.target.value)}>
                   {product.size?.map((s) => (
                    <FilterSizeOption key={s}>{s}</FilterSizeOption> 
                   ))} 

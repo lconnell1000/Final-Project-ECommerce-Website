@@ -1,9 +1,10 @@
-import { Add, Remove } from "@material-ui/icons"
-import styled from "styled-components"
-import Announcement from "../components/Announcement"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
-import { mobile } from "../responsive"
+import { Add, Remove } from "@material-ui/icons";
+import styled from "styled-components";
+import Announcement from "../components/Announcement";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import { mobile } from "../responsive";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
 
@@ -57,6 +58,7 @@ const ProductDetails = styled.div`
 `
 const Image = styled.img`
     width: 200px;
+    padding: 5px;
 `
 const Details = styled.div`
     padding: 20px;
@@ -134,6 +136,8 @@ const Button = styled.button`
     font-weight: 600;
 `
 const Cart = () => {
+    const cart = useSelector((state) => state.cart);
+
   return (
     <Container>
         <Navbar />
@@ -150,49 +154,33 @@ const Cart = () => {
             </Top>
             <Bottom>
                 <Info>
+                    {cart.products.map((product) => (
                     <Product>
                         <ProductDetails>
-                            <Image src ="https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280048526_5838119066215914_4967331099053599431_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=jmm1VgYH6QQAX_kbRzd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-jHJZJyJce3TLXfY3CsYwWnATcz1RulE1NRpB4I_41hA&oe=6280FC0A"/>
+                            <Image src ={product.img}/>
                             <Details>
-                            <ProductName><b>Product:</b> Red Dress</ProductName>
-                            <ProductId><b>ID:</b> 923480238</ProductId>
-                            <ProductSize><b>Size:</b> 10</ProductSize>
+                            <ProductName><b>Product:</b> {product.title}</ProductName>
+                            <ProductId><b>ID:</b> {product._id}</ProductId>
+                            <ProductSize><b>Size:</b> {product.size}</ProductSize>
                             </Details>
                         </ProductDetails>
                         <PriceDetails>
                             <ProductAmountContainer>
                                 <Add/>
-                                <ProductAmount>2</ProductAmount>
+                                <ProductAmount>{product.quantity}</ProductAmount>
                                 <Remove/>
                             </ProductAmountContainer>
-                            <ProductPrice> $75</ProductPrice>
+                            <ProductPrice> $ {product.price * product.quantity}</ProductPrice>
                         </PriceDetails>
                     </Product>
+                    ))}
                     <Hr />
-                    <Product>
-                        <ProductDetails>
-                            <Image src ="https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280048526_5838119066215914_4967331099053599431_n.jpg?_nc_cat=108&ccb=1-6&_nc_sid=0debeb&_nc_ohc=jmm1VgYH6QQAX_kbRzd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-jHJZJyJce3TLXfY3CsYwWnATcz1RulE1NRpB4I_41hA&oe=6280FC0A"/>
-                            <Details>
-                            <ProductName><b>Product:</b> Red Dress</ProductName>
-                            <ProductId><b>ID:</b> 923480238</ProductId>
-                            <ProductSize><b>Size:</b> 10</ProductSize>
-                            </Details>
-                        </ProductDetails>
-                        <PriceDetails>
-                            <ProductAmountContainer>
-                                <Add/>
-                                <ProductAmount>2</ProductAmount>
-                                <Remove/>
-                            </ProductAmountContainer>
-                            <ProductPrice> $75</ProductPrice>
-                        </PriceDetails>
-                    </Product>
                 </Info>
                 <Summary>
                     <SummaryTitle>Order Summary</SummaryTitle>
                     <SummaryItem>
                         <SummaryItemText>Subtotal</SummaryItemText>
-                        <SummaryItemPrice>$300</SummaryItemPrice>
+                        <SummaryItemPrice>$ {cart.total}</SummaryItemPrice>
                     </SummaryItem>
                     <SummaryItem>
                         <SummaryItemText>Estimated Shipping</SummaryItemText>
@@ -200,7 +188,7 @@ const Cart = () => {
                     </SummaryItem>
                     <SummaryItem type="total">
                         <SummaryItemText>Total</SummaryItemText>
-                        <SummaryItemPrice>$320</SummaryItemPrice>
+                        <SummaryItemPrice>$ ${cart.total+20}</SummaryItemPrice>
                     </SummaryItem>
                     <Button>Checkout Now</Button>
                 </Summary>
