@@ -9,7 +9,6 @@ import { useLocation } from "react-router";
 import { useState } from "react";
 
 const Container = styled.div`
-
 `
 const Title = styled.h1`
     margin: 15px;
