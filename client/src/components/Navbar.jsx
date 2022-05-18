@@ -98,7 +98,6 @@ const Navbar = () => {
                 </Menu>
                 </Link>
             </Right>
-        
         </Wrapper>
     </Container>
   )
