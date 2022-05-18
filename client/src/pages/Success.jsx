@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router";
 import { userRequest } from "../requestMethods";
+import { Link } from "react-router-dom";
 
 const Success = () => {
   const location = useLocation();
@@ -40,8 +41,10 @@ const Success = () => {
     >
       {orderId
         ? `Order has been created successfully. Your order number is ${orderId}`
-        : `Successfull. Your order is being prepared...`}
+        : `Payment successful. Your order is being prepared...`}
+        <Link to = "/">
       <button style={{ padding: 10, marginTop: 20 }}>Go to Homepage</button>
+      </Link>
     </div>
   );
 };
