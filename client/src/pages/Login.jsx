@@ -1,8 +1,9 @@
-import { useState } from "react"
-import styled from "styled-components"
-import { mobile } from "../responsive"
-import { login } from "../redux/apiCalls"
-import  {useDispatch, useSelector } from "react-redux"
+import { useState } from "react";
+import styled from "styled-components";
+import { mobile } from "../responsive";
+import { login } from "../redux/apiCalls";
+import  {useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100vw;
@@ -53,12 +54,12 @@ const Button = styled.button`
     }
 `;
 
-const Link = styled.a`
-    margin: 5px 0px;
-    font-size: 12px;
-    text-decoration: underline;
-    cursor: pointer;
-`;
+// const Link = styled.a`
+//     margin: 5px 0px;
+//     font-size: 12px;
+//     text-decoration: underline;
+//     cursor: pointer;
+// `;
 
 const Error = styled.span`
   color: red;
@@ -93,8 +94,7 @@ const Login = () => {
                     Log In
                 </Button>
                 {error && <Error>Something went wrong...</Error>}
-                <Link>Forgot Password?</Link>
-                <Link>Create a New Account</Link>
+                <Link to="/register">Create a New Account</Link>
             </Form>
         </Wrapper>
     </Container>
