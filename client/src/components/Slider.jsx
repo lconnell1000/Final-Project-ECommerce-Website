@@ -99,7 +99,9 @@ const handleClick = (direction) => {
                 <InfoContainer>
                     <Title>{item.title}</Title>
                     <Description>{item.description}</Description>
+                    <Link to={`/products/${item.category}`}>
                     <Button>SHOP NOW</Button>
+                    </Link>
                 </InfoContainer>
                 </Slide>
                 ))}

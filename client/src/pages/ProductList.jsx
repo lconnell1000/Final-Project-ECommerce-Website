@@ -61,6 +61,7 @@ const ProductList = () => {
             <Option disabled>
                 Colour
             </Option>
+            <Option>Colour:</Option>
             <Option>red</Option>
             <Option>beige</Option>
             <Option>floral</Option>
@@ -68,11 +69,16 @@ const ProductList = () => {
             <Option>orange</Option>
             <Option>yellow</Option>
             <Option>salmon</Option>
+            <Option>black</Option>
+            <Option>teal</Option>
+            <Option>gold</Option>
+            <Option>blue</Option>
             </Select>
             <Select name ="size" onChange={handleFilters}>
             <Option disabled>
                 Size
             </Option>
+            <Option>Size:</Option>
             <Option>XS</Option>
             <Option>S</Option>
             <Option>M</Option>
@@ -84,6 +90,7 @@ const ProductList = () => {
             <Option>12</Option>
             <Option>14</Option>
             <Option>16</Option>
+            <Option>n/a</Option>
             </Select>
         </Filter>
         <Filter>
