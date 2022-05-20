@@ -7,6 +7,8 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 
+
+
 const Container = styled.div`
     height: 60px;
     ${mobile({ height: "50px" })}
@@ -70,6 +72,7 @@ const Navbar = () => {
     const quantity = useSelector(state => state.cart.quantity)
     //console.log(quantity);
 
+
   return (
     <Container>
         <Wrapper>
@@ -90,7 +93,10 @@ const Navbar = () => {
                 <Menu>Register</Menu>
                 </Link>
                 <Link to ="/login">
-                <Menu>Log in</Menu>
+                <Menu>Login</Menu>
+                </Link>
+                <Link to ="/logout">
+                <Menu>Log Out</Menu>
                 </Link>
                 <Link to="/cart">
                 <Menu>

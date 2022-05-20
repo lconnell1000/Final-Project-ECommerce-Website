@@ -1,10 +1,10 @@
 import { loginFailure, loginStart, loginSuccess,
-   registerSuccess, registerFailure, registerStart }
+   registerSuccess, registerFailure, registerStart, }
 from "./userRedux";
 import { publicRequest } from "../requestMethods";
 
 export const login = async (dispatch, user) => {
-  console.log(user);
+  //console.log(user);
   dispatch(loginStart());
   try {
     const res = await publicRequest.post("/auth/login", user);

@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import ProductList from "./pages/ProductList";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Logout from "./pages/Logout";
 import Cart from "./pages/Cart";
 import Success from "./pages/Success";
 import {
@@ -35,6 +36,9 @@ const App = () => {
       </Route>
       <Route path="/login">
         {user ? <Redirect to="/"/> : <Login />}
+      </Route>
+      <Route path="/logout">
+        {!user ? <Redirect to="/"/> : <Logout />}
       </Route>
       <Route path="/register">
         <Register />
