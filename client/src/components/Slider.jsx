@@ -1,8 +1,9 @@
-import { ArrowLeftRounded, ArrowRightRounded } from "@material-ui/icons"
-import styled from "styled-components"
-import { useState } from 'react'
-import {sliderItems} from '../data'
-import { mobile } from "../responsive"
+import { ArrowLeftRounded, ArrowRightRounded } from "@material-ui/icons";
+import styled from "styled-components";
+import { useState } from 'react';
+import {sliderItems} from '../data';
+import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     width: 100%;

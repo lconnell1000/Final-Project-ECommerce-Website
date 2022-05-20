@@ -32,7 +32,7 @@ const Select = styled.select`
     margin-right: 5px;
     ${mobile({ margin: "10px 0px" })}
 `
-const Option = styled.option``
+const Option = styled.option``;
 
 const ProductList = () => {
     const location = useLocation();
