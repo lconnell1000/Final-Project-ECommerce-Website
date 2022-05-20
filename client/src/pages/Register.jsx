@@ -3,6 +3,8 @@ import styled from "styled-components"
 import { mobile } from "../responsive"
 import { register } from "../redux/apiCalls";
 import  {useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router";
+
 const Container = styled.div`
     width: 100vw;
     height: 100vh;
@@ -58,10 +60,12 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
     const { isFetching, error } = useSelector((state) => state.user);
+    const history = useHistory();
 
     const handleClick = (e) => {
         e.preventDefault();
         register(dispatch, { username, email, password });
+        history.push("/")
     };
   return (
     <Container>
