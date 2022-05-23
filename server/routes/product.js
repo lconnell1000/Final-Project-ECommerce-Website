@@ -39,7 +39,7 @@ router.delete("/:id", verifyTokenAndAdmin, async (req,res) => {
     try{
         await Product.findByIdAndDelete(req.params.id)
         res.status(200).json("Product Deleted")
-    }catch{
+    }catch (err) {
         res.status(500).json(err)
     }
     });
