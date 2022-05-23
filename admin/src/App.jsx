@@ -1,5 +1,3 @@
-
-   
 import Sidebar from "./components/sidebar/Sidebar";
 import Topbar from "./components/topbar/Topbar";
 import "./App.css";
@@ -19,7 +17,9 @@ import Login from "./pages/login/Login";
 import { useSelector } from "react-redux";
 
 function App() {
-  const admin = useSelector((state) => state.user.currentUser.isAdmin);
+
+  const admin = useSelector((state) => state.user.currentUser?.isAdmin);
+
   return (
     <Router>
       <Switch>

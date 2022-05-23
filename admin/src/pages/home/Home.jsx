@@ -1,11 +1,9 @@
 import Chart from "../../components/chart/Chart";
 import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
 import "./home.css";
-import { userData } from "../../dummyData";
 import WidgetSm from "../../components/widgetSm/WidgetSm";
 import WidgetLg from "../../components/widgetLg/WidgetLg";
 import { useState, useMemo, useEffect } from "react";
-import { ThreeSixtySharp } from "@material-ui/icons";
 import { userRequest } from "../../requestMethods";
 
 export default function Home() {
@@ -33,7 +31,7 @@ export default function Home() {
   useEffect(() => {
     const getStats = async () => {
       try {
-        const res = await userRequest.get("/users/stats");
+        const res = await userRequest.get("users/stats");
         res.data.map((item) =>
           setUserStats((prev) => [
             ...prev,
@@ -44,11 +42,13 @@ export default function Home() {
     };
     getStats();
   }, [MONTHS]);
+
+  console.log("user stats" + userStats)
   
   return (
     <div className="home">
       <FeaturedInfo />
-      <Chart data={userStats} title="User Analytics" grid dataKey="Active User"/>
+      <Chart data={userStats} title="User Analytics" grid dataKey="Active Users"/>
       <div className="homeWidgets">
         <WidgetSm/>
         <WidgetLg/>
