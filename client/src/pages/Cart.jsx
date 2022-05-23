@@ -176,7 +176,7 @@ const Cart = () => {
                     <TopText>Shopping Cart({quantity})</TopText>
                     <TopText>Your Wishlist(0)</TopText>
                 </TopTexts>
-                {/* <TopButton type="filled">Checkout Now</TopButton> */}
+                <TopButton type="filled">Checkout Now</TopButton>
             </Top>
             <Bottom>
                 <Info>
