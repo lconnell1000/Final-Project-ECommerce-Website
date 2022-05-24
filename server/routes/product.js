@@ -14,6 +14,7 @@ router.post("/", verifyTokenAndAdmin, async (req,res)=> {
         const savedProduct = await newProduct.save();
         res.status(200).json(savedProduct);
     }catch(err){
+      console.error(err);
         res.status(500).json(err);
     }
 })
