@@ -1,16 +1,58 @@
 import { Link, useLocation } from "react-router-dom";
 import "./product.css";
 import Chart from "../../components/chart/Chart"
-import {productData} from "../../dummyData"
 import { Publish } from "@material-ui/icons";
 import { useSelector } from "react-redux"
+import { useState, useMemo, useEffect } from "react";
+import { userRequest } from "../../requestMethods"
 
 export default function Product() {
     const location = useLocation();
     const productId = location.pathname.split("/")[2];
+    const [productStats,setProductStats] = useState([]);
 
     const product = useSelector((state) => 
     state.product.products.find((product) => product._id === productId));
+
+    const MONTHS = useMemo(
+        () => [
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Agu",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ],
+        []
+      );
+
+      useEffect(() => {
+        const getStats = async () => {
+          try {
+            const res = await userRequest.get("/orders/income?pid=" + productId);
+            const list = res.data.sort((a,b)=>{
+                return a._id - b._id
+            })
+            list.map((item) =>
+              setProductStats((prev) => [
+                ...prev,
+                { name: MONTHS[item._id - 1], Sales: item.total },
+              ])
+            );
+          } catch (err) {
+            console.log(err);
+          }
+        };
+        getStats();
+      }, [productId, MONTHS]);
+
+      //console.log("product :", product);
   return (
     <div className="product">
       <div className="productTitleContainer">
@@ -21,7 +63,7 @@ export default function Product() {
       </div>
       <div className="productTop">
           <div className="productTopLeft">
-              <Chart data={productData} dataKey="Sales" title="Sales Performance"/>
+              <Chart data={productStats} dataKey="Sales" title="Sales Performance"/>
           </div>
           <div className="productTopRight">
               <div className="productInfoTop">
@@ -31,16 +73,17 @@ export default function Product() {
               <div className="productInfoBottom">
                   <div className="productInfoItem">
                       <span className="productInfoKey">id:</span>
-                      <span className="productInfoValue">{product.id}</span>
+                      <span className="productInfoValue">{product._id}</span>
                   </div>
                   <div className="productInfoItem">
                       <span className="productInfoKey">sales:</span>
-                      <span className="productInfoValue">5123</span>
+                      <span className="productInfoValue">2000</span>
                   </div>
                  
                   <div className="productInfoItem">
                       <span className="productInfoKey">in stock:</span>
-                      <span className="productInfoValue">{product.inStock}</span>
+                      <span className="productInfoValue">
+                        {product.inStock ? 'Yes' : 'No'}</span>
                   </div>
               </div>
           </div>
