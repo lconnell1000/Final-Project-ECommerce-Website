@@ -9,12 +9,14 @@ import {
 import app from "../../firebase";
 import { addProduct } from "../../redux/apiCalls";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router";
 
 export default function NewProduct() {
   const [ inputs, setInputs] = useState({});
   const [ file, setFile] = useState(null);
   const [ category, setCategory]= useState([]);
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const handleChange = (e) => {
    setInputs((prev) => {
@@ -65,6 +67,7 @@ export default function NewProduct() {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           const product = { ...inputs, img: downloadURL, categories: category };
           addProduct(product, dispatch);
+          history.push("/products")
         });
       }
     );
@@ -93,6 +96,10 @@ export default function NewProduct() {
         <div className="addProductItem">
           <label>Categories</label>
           <input type="text" placeholder="Example: pants,womens" onChange = {handleCategories}/>
+        </div>
+        <div className="addProductItem">
+          <label>Size</label>
+          <input type="text" placeholder="Example: n/a or 10 or L" onChange = {handleCategories}/>
         </div>
         <div className="addProductItem">
           <label>In Stock?</label>
