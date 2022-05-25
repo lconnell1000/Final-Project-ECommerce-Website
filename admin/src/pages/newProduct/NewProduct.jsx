@@ -15,6 +15,7 @@ export default function NewProduct() {
   const [ inputs, setInputs] = useState({});
   const [ file, setFile] = useState(null);
   const [ category, setCategory]= useState([]);
+  const [ colour, setColour ]= useState([]);
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -26,6 +27,10 @@ export default function NewProduct() {
 
   const handleCategories = (e) => {
     setCategory(e.target.value.split(","));
+  };
+
+  const handleColours = (e) => {
+    setColour(e.target.value.split(","));
   };
 
   const handleClick = (e) => {
@@ -65,7 +70,7 @@ export default function NewProduct() {
         // Handle successful uploads on complete
         // For instance, get the download URL: https://firebasestorage.googleapis.com/...
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-          const product = { ...inputs, img: downloadURL, categories: category };
+          const product = { ...inputs, img: downloadURL, categories: category, colour: colour };
           addProduct(product, dispatch);
           history.push("/products")
         });
@@ -95,11 +100,15 @@ export default function NewProduct() {
         </div>
         <div className="addProductItem">
           <label>Categories</label>
-          <input type="text" placeholder="Example: pants,womens" onChange = {handleCategories}/>
+          <input name="categories" type="text" placeholder="Example: pants,womens" onChange = {handleCategories}/>
+        </div>
+        <div className="addProductItem">
+          <label>Colours</label>
+          <input name="colour" type="text" placeholder="Example: white,pink" onChange = {handleColours}/>
         </div>
         <div className="addProductItem">
           <label>Size</label>
-          <input type="text" placeholder="Example: n/a or 10 or L" onChange = {handleCategories}/>
+          <input name="size" type="text" placeholder="Example: n/a or 10 or L" onChange = {handleChange}/>
         </div>
         <div className="addProductItem">
           <label>In Stock?</label>
