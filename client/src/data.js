@@ -1,7 +1,7 @@
 export const sliderItems = [
     {
         id: 1,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280380469_5838118376215983_5661114338501045321_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0debeb&_nc_ohc=P8fGSOoYhV0AX_krzY6&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-LuuygauyW5w4UvteK-uos3a_QCyU6xAWU8_KN5dmbYQ&oe=628BFB96",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/1653455786721shirt4.jpg?alt=media&token=e1d398be-0d9d-4f84-9bd3-4a9d79688090",
         title: "WOMENS WEAR",
         description: "SHOP ALL WOMEN'S WEAR",
         category: "womens",
@@ -9,18 +9,18 @@ export const sliderItems = [
     },
     {
         id: 2,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/283017102_5862013240493163_317364645737052984_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=0debeb&_nc_ohc=Q-cyEOpJ3roAX-H3OeX&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8tF1NefbwQuk2l9Ec4Mrwwm9hEBPVQPibxQixx3LLBqg&oe=628D062B",
-        title: "UPCYCLED SILK SCRUNCHIES",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/1653392958961shawl.jpg?alt=media&token=e60b2914-a6bc-45b9-9d07-482498d6d447",
+        title: "CLOTHES FOR THE COLD WEATHER",
         description: "SEE THE COLLECTION",
-        category: "scrunchies",
+        category: "winter",
         bg: "ADD8E6",
     },
     {
         id: 3,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280764211_5838119052882582_592450467890474680_n.jpg?_nc_category=105&ccb=1-6&_nc_sid=0debeb&_nc_ohc=JH86D5Y6HjEAX-LTrXM&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_Lo6FQoudRLesOqc4bd-EEmbh_A9f-tOG9c_-i2Hyhmg&oe=6287842C",
-        title: "CARTIGANS FOR THE COLD WEATHER!",
-        description: "BROWSE OUR CARTIGANS",
-        category: "cartigans",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/1653456549584scrunchie1.jpg?alt=media&token=de9939c8-5ab6-4048-997d-15fd13641bc9",
+        title: "SEE OUR ACCESSORIES",
+        description: "SHOP NOW",
+        category: "accessories",
         bg: "ADD8E6",
     }
 ]
@@ -42,13 +42,13 @@ export const categories = [
         id: 3,
         img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280097785_5838118432882644_7636646076885974707_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=NoE6PgQCK1sAX_eoKrl&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8qsRjqvA86ETWMZXMSuAu_GP5jsfRRMIiGvM5yRGCbrg&oe=628CDA90",
         title: "CARTIGANS",
-        category: "cartigans",
+        category: "knits",
     },
     {
         id: 4,
         img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280017010_5838118649549289_2406138824416824332_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=AhlTpfMZRCgAX-v0rMJ&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-6XcJtpEwUS_ps7_aOVSfMq5RScf00rWlpk6r-Es-3ag&oe=628BDA3D",
         title: "PANTS",
-        category: "pants",
+        category: "skirts",
     }
 ]
 
