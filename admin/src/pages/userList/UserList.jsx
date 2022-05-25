@@ -6,10 +6,15 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteUser, getUsers } from "../../redux/apiCalls";
 
+
 export default function UserList() {
 const dispatch = useDispatch();
-const users = useSelector((state) => state.user.users);
+const users = useSelector((state) => {
+  console.log(state);
+  return state.user.users
+});
 
+console.log(users);
 useEffect(() => {
   getUsers(dispatch);
 }, [dispatch]);
@@ -57,7 +62,7 @@ const handleDelete = (id) => {
             </Link>
             <DeleteOutline
               className="userListDelete"
-              onClick={() => handleDelete(params.row.id)}
+              onClick={() => handleDelete(params.row._id)}
             />
           </>
         );

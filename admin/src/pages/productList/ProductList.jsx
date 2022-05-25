@@ -20,11 +20,11 @@ export default function ProductList() {
   };
 
   const columns = [
-    { field: "_id", headerName: "ID", width: 220 },
+    { field: "_id", headerName: "ID", width: 150 },
     {
       field: "product",
       headerName: "Product",
-      width: 200,
+      width: 250,
       renderCell: (params) => {
         return (
           <div className="productListItem">
@@ -34,7 +34,7 @@ export default function ProductList() {
         );
       },
     },
-    { field: "inStock", headerName: "Stock", width: 200 },
+    { field: "inStock", headerName: "Stock", width: 150 },
     {
       field: "price",
       headerName: "Price",
@@ -46,6 +46,7 @@ export default function ProductList() {
       width: 150,
       renderCell: (params) => {
         return (
+          
           <>
             <Link to={"/product/" + params.row._id}>
               <button className="productListEdit">Edit</button>
