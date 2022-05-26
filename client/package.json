@@ -9,6 +9,8 @@
     "@material-ui/icons": "^4.11.3",
     "@mui/material": "^5.6.4",
     "@reduxjs/toolkit": "^1.8.1",
+    "@sajari/react-components": "^1.14.4",
+    "@sajari/react-search-ui": "^4.16.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

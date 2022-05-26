@@ -1,6 +1,7 @@
 import { FavoriteBorderOutlined, Search, ShoppingCartRounded } from "@material-ui/icons";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 const Info = styled.div `
     opacity: 0;
@@ -56,6 +57,7 @@ const Icon = styled.div `
     }
 `
 const Product = ({item}) => {
+
   return (
     <Container>
         <Image src = {item.img}/>

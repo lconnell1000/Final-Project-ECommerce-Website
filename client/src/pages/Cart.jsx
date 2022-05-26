@@ -1,4 +1,4 @@
-import { Add, Remove } from "@material-ui/icons";
+
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
@@ -139,7 +139,7 @@ const Button = styled.button`
     font-weight: 600;
 `
 const Cart = () => {
-    const quantity = useSelector(state => state.cart.quantity)
+    const quantityCart = useSelector(state => state.cart.quantity);
     const cart = useSelector((state) => state.cart);
     const [stripeToken,setStripeToken] = useState(null);
     const history = useHistory();
@@ -180,8 +180,10 @@ const Cart = () => {
                 <TopButton>Continue Shopping</TopButton>
             </Link>
                 <TopTexts>
-                    <TopText>Shopping Cart({quantity})</TopText>
-                    <TopText>Your Wishlist(0)</TopText>
+                    <TopText>Shopping Cart({quantityCart})</TopText>
+                    
+                    <TopText>Your Wishlist</TopText>
+                    
                 </TopTexts>
                 <TopButton onClick={handleCart} type="filled">Clear Cart</TopButton>
             </Top>

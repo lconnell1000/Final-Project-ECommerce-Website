@@ -12,6 +12,7 @@ import { addProduct } from "../redux/cartRedux";
 import { useDispatch } from "react-redux";
 
 
+
 const Container = styled.div`
 
 `
@@ -134,6 +135,8 @@ const Product = () => {
     dispatch(
       addProduct({ ...product, quantity, size: sizeValue })
     );
+
+  
   };
   return (
     <Container>

@@ -40,6 +40,7 @@ const Button = styled.button`
     background-color: teal;
     color: white;
 `
+//in future want to have this feature working
 const Newsletter = () => {
   return (
     <Container>

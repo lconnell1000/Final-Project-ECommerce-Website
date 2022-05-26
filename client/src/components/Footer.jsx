@@ -1,6 +1,7 @@
 import { Facebook, Instagram, MailOutline, Phone, RoomOutlined } from "@material-ui/icons"
 import styled from "styled-components"
 import { mobile } from "../responsive"
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     display: flex;
@@ -41,6 +42,10 @@ const Center = styled.div`
 `
 const Title = styled.h3`
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
 `
 const List = styled.ul`
     margin: 0;
@@ -48,6 +53,9 @@ const List = styled.ul`
     list-style: none;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 `
 const ListItem = styled.li`
     width: 50%;
@@ -84,14 +92,18 @@ const Footer = () => {
         <Center>
             <Title>Useful Links</Title>
             <List>
+            <Link to ="/" style={{ textDecoration:"none", color:"black" }}>
             <ListItem>Home</ListItem>
+            </Link>
+            <Link to ="/cart" style={{ textDecoration:"none", color:"black" }}>
             <ListItem>Cart</ListItem>
-            <ListItem>Upper Garments</ListItem>
-            <ListItem>Lower Garments</ListItem>
-            <ListItem>My Account</ListItem>
-            <ListItem>Order Tracking</ListItem>
-            <ListItem>Wishlist</ListItem>
-            <ListItem>Terms & Conditions</ListItem>
+            </Link>
+            <Link to ="/register" style={{ textDecoration:"none", color:"black" }}>
+            <ListItem>Register</ListItem>
+            </Link>
+            <Link to ="/login" style={{ textDecoration:"none", color:"black" }}>
+            <ListItem>Login</ListItem>
+            </Link>
             </List>
         </Center>
         <Right>
