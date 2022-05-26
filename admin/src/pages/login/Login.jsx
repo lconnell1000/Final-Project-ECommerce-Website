@@ -59,11 +59,13 @@ const Button = styled.button`
      const dispatch = useDispatch();
      const history = useHistory();
 
+    const redirect = () => history.push("/");
 
-    const handleClick = (e) => {
+     const handleClick = (e) => {
         e.preventDefault();
-        login(dispatch, { username, password });
-        history.push("/");
+
+        login(dispatch, { username, password }, redirect);
+        
     };
 
 

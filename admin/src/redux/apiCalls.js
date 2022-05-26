@@ -25,11 +25,13 @@ import {
   addProductSuccess,
 } from "./productRedux";
 
-export const login = async (dispatch, user) => {
+export const login = async (dispatch, user, cb) => {
   dispatch(loginStart());
   try {
     const res = await publicRequest.post("auth/login", user);
+    userRequest.defaults.headers.common['token'] = `Bearer ${res.data.accessToken}`;
     dispatch(loginSuccess(res.data));
+    cb()
   } catch (err) {
     dispatch(loginFailure());
   }

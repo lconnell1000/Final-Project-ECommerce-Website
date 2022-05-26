@@ -25,7 +25,8 @@ router.post("/register", async (req,res) => {
 
 router.post("/login", async (req,res) => {
     try {
-    const user = await User.findOne({userName: req.body.user_name});
+    const user = await User.findOne({username: req.body.username});
+    // console.log("user :", user)
     !user && res.status(401).json("Incorrect Username");
     const hashedPass = 
     CryptoJS.AES.decrypt

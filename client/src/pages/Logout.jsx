@@ -12,7 +12,7 @@ const Container = styled.div`
       rgba(255, 255, 255, 0.2),
       rgba(255, 255, 255, 0.8)
     ),
-    url(https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/281795013_5862116663816154_7020159697593332901_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=FAZ83_yxX2EAX81yZss&tn=XdfBG56u3cRmIbXd&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-IUgblq9mpjUpNYOH6RFQV6HPYyn3t861gLj3RKhvQmA&oe=628CB6EC),
+    url(https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/goodbye2.jpg?alt=media&token=960ed77b-b5d8-42d4-a271-57a9c008b476),
     center;
   display: flex;
   align-items: flex-start;
@@ -20,6 +20,10 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
   width: 25%;
   padding: 40px;
   background-color: transparent;
@@ -28,6 +32,7 @@ const Wrapper = styled.div`
 const Title = styled.h1`
   font-size: 24px;
   font-weight: 300;
+  padding: 25px;
 `;
 
 

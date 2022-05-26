@@ -9,7 +9,7 @@ const Container = styled.div`
     width: 100vw;
     height: 100vh;
     background: linear-gradient(rgba(255,255,255,0.2),rgba(255,255,255,0.8)),
-     url(https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280644516_5838181936209627_1176713398283326887_n.jpg?_nc_cat=101&ccb=1-6&_nc_sid=0debeb&_nc_ohc=OozsEEp7W8YAX_Ej3m5&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_bxKQDUU4JszgThapyvtutbe8-tjDWCst8XuUC0IzTYg&oe=628A225E),
+     url(https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/login.jpg?alt=media&token=910dda4c-7380-41a9-b8b9-0f8431461325),
      center;
      display: flex;
      align-items: flex-start;

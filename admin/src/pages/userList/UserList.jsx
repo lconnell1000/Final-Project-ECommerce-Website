@@ -11,7 +11,7 @@ export default function UserList() {
 const dispatch = useDispatch();
 const users = useSelector((state) => {
   console.log(state);
-  return state.user.users
+  return state.user.users || []
 });
 
 console.log(users);
