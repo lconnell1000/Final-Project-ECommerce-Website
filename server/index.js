@@ -30,22 +30,30 @@ app.use("/api/carts", cartRoute);
 app.use("/api/orders", orderRoute);
 app.use("/api/checkout", stripeRoute);
 
-// if(process.env.NODE_ENV === 'production'){
+if(process.env.NODE_ENV === 'production'){
 
 
     // const adminStatic = path.join(__dirname, '..', 'admin', 'build');
     // console.log(adminStatic);
     // app.use(express.static(adminStatic));
-    // app.get('/admin', (req, res) => {
-    //     res.sendFile(filepath)
-    // });
+    // app.use(express.static(path.join(__dirname, 'build2')));
+   
 
     // todo: load client static
-    // app.get('/', (req, res) => {
+    // const clientStatic = path.join(__dirname, 'build');
+    app.use(express.static(path.join(__dirname, 'build')));
 
-    // })
+
+   
+    app.get('/', (req, res) => {
+        res.sendFile(path.join(__dirname, 'build/index.html'));
+    });
     
-// }
+}
+// app.get('/admin', (req, res) => {
+//     res.sendFile(filepath)
+// });
+
 
 
 app.listen(process.env.PORT || 5000, () => {
