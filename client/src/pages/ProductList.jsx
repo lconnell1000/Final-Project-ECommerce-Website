@@ -59,37 +59,33 @@ const ProductList = () => {
             <FilterText>Filter Products:</FilterText>
             <Select name="colour" onChange={handleFilters}>
             <Option disabled>
-                Colour
+                Colour/Dying-Method
             </Option>
-            <Option>Colour:</Option>
             <Option>red</Option>
-            <Option>beige</Option>
             <Option>floral</Option>
             <Option>white</Option>
             <Option>orange</Option>
             <Option>yellow</Option>
-            <Option>salmon</Option>
+            <Option>pink</Option>
+            <Option>brown</Option>
             <Option>black</Option>
             <Option>teal</Option>
             <Option>gold</Option>
             <Option>blue</Option>
+            <Option>avocado</Option>
+            <Option>eucalyptus</Option>
             </Select>
             <Select name ="size" onChange={handleFilters}>
             <Option disabled>
                 Size
             </Option>
-            <Option>Size:</Option>
-            <Option>XS</Option>
             <Option>S</Option>
             <Option>M</Option>
             <Option>L</Option>
-            <Option>XL</Option>
-            <Option>6</Option>
             <Option>8</Option>
             <Option>10</Option>
             <Option>12</Option>
             <Option>14</Option>
-            <Option>16</Option>
             <Option>n/a</Option>
             </Select>
         </Filter>

@@ -28,26 +28,26 @@ export const sliderItems = [
 export const categories = [
     {
         id: 1,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280261791_5838118562882631_1356182101440161965_n.jpg?_nc_category=107&ccb=1-6&_nc_sid=0debeb&_nc_ohc=-L8uoEEJ724AX-uxmkw&_nc_ht=scontent.fadl5-1.fna&oh=00_AT9bgyuCcL_ePRzORX8eP-CH-oGAPAD071PKSNStGB6aIw&oe=6287B882",
-        title: "DRESSES",
-        category: "dresses",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/chris-galbraith-7XAM0J3dNQM-unsplash.jpg?alt=media&token=5758b9dd-bdbe-45ee-b056-5e12ea5b1adc",
+        title: "SUMMERWEAR",
+        category: "summer",
     },
     {
         id: 2,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280698720_5838118639549290_766417736275184958_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=jBZhxv3ubDIAX8GML8u&_nc_ht=scontent.fadl5-1.fna&oh=00_AT_kzHydmhfor3Mp4tIAp3hcfcWxfP_i06jBjeeSzoIzYg&oe=628C403F",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/shirts.jpg?alt=media&token=cd30882a-1d26-4a8b-ba45-a424538df1b8",
         title: "SHIRTS",
         category: "shirts",
     },
     {
         id: 3,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280097785_5838118432882644_7636646076885974707_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_ohc=NoE6PgQCK1sAX_eoKrl&_nc_ht=scontent.fadl5-1.fna&oh=00_AT8qsRjqvA86ETWMZXMSuAu_GP5jsfRRMIiGvM5yRGCbrg&oe=628CDA90",
-        title: "CARTIGANS",
-        category: "knits",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/dresses.jpg?alt=media&token=f9a9247f-f3bb-4dde-9365-ba495d01d5f0",
+        title: "DRESSES",
+        category: "dresses",
     },
     {
         id: 4,
-        img: "https://scontent.fadl5-1.fna.fbcdn.net/v/t39.30808-6/280017010_5838118649549289_2406138824416824332_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=0debeb&_nc_ohc=AhlTpfMZRCgAX-v0rMJ&_nc_ht=scontent.fadl5-1.fna&oh=00_AT-6XcJtpEwUS_ps7_aOVSfMq5RScf00rWlpk6r-Es-3ag&oe=628BDA3D",
-        title: "PANTS",
+        img: "https://firebasestorage.googleapis.com/v0/b/again-store.appspot.com/o/skirts.jpg?alt=media&token=9934acd1-b97b-4862-b47e-b6fa94e83140",
+        title: "SKIRTS",
         category: "skirts",
     }
 ]
