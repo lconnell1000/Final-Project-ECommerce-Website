@@ -33,17 +33,17 @@ app.use("/api/checkout", stripeRoute);
 // if(process.env.NODE_ENV === 'production'){
 
 
-    const adminStatic = path.join(__dirname, '..', 'admin', 'build');
-    console.log(adminStatic);
-    app.use(express.static(adminStatic));
-    app.get('/admin', (req, res) => {
-        res.sendFile(filepath)
-    });
+    // const adminStatic = path.join(__dirname, '..', 'admin', 'build');
+    // console.log(adminStatic);
+    // app.use(express.static(adminStatic));
+    // app.get('/admin', (req, res) => {
+    //     res.sendFile(filepath)
+    // });
 
     // todo: load client static
-    app.get('/', (req, res) => {
+    // app.get('/', (req, res) => {
 
-    })
+    // })
     
 // }
 
