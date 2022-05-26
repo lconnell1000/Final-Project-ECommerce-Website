@@ -4,12 +4,14 @@ import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { mobile } from "../responsive";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch} from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
 import { useHistory } from "react-router";
 import { Link } from "react-router-dom";
+import { clearCart } from "../redux/cartRedux";
+
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -32,7 +34,7 @@ const Top = styled.div`
 const TopButton= styled.button`
     padding: 10px;
     font-weight: 300;
-    cursor-pointer;
+    cursor: pointer;
     border: ${props=>props.type === "filled" && "none"};
     background-color: ${props=>props.type === "filled" ? "black" : "transparent"};
     color: ${props=>props.type === "filled" && "white"}
@@ -141,10 +143,15 @@ const Cart = () => {
     const cart = useSelector((state) => state.cart);
     const [stripeToken,setStripeToken] = useState(null);
     const history = useHistory();
+    const dispatch = useDispatch();
 
     const onToken = (token) => {
         setStripeToken(token);
 }
+
+    const handleCart = (e) => {
+    dispatch(clearCart());
+  };
 
     useEffect(() => {
         const makeRequest = async () => {
@@ -176,7 +183,7 @@ const Cart = () => {
                     <TopText>Shopping Cart({quantity})</TopText>
                     <TopText>Your Wishlist(0)</TopText>
                 </TopTexts>
-                <TopButton type="filled">Checkout Now</TopButton>
+                <TopButton onClick={handleCart} type="filled">Clear Cart</TopButton>
             </Top>
             <Bottom>
                 <Info>
@@ -192,11 +199,11 @@ const Cart = () => {
                         </ProductDetails>
                         <PriceDetails>
                             <ProductAmountContainer>
-                                <Add/>
+                                Quantity:
                                 <ProductAmount>{product.quantity}</ProductAmount>
-                                <Remove/>
+                                
                             </ProductAmountContainer>
-                            <ProductPrice> $ {product.price * product.quantity}</ProductPrice>
+                            <ProductPrice>$ {product.price * product.quantity}</ProductPrice>
                         </PriceDetails>
                     </Product>
                     ))}
