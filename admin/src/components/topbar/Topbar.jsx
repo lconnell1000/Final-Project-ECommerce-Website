@@ -10,14 +10,14 @@ export default function Topbar() {
           <span className="logo">againadmin</span>
         </div>
         <div className="topRight">
-          <div className="topbarIconContainer">
+          {/* <div className="topbarIconContainer">
             <NotificationsNone />
-            <span className="topIconBadge">2</span>
+            <span className="topIconBadge"></span>
           </div>
           <div className="topbarIconContainer">
             <Language />
-            <span className="topIconBadge">2</span>
-          </div>
+            <span className="topIconBadge"></span> */}
+          {/* </div> */}
           <div className="topbarIconContainer">
             <Settings />
           </div>
