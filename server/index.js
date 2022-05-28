@@ -46,6 +46,7 @@ if(process.env.NODE_ENV === 'production'){
     // todo: load client static
     // const clientStatic = path.join(__dirname, 'build');
     app.use(express.static(path.join(__dirname, '../client/build')));
+    app.use('/admin', express.static(path.join(__dirname, '../admin/build')));
 
     // app.get('/admin', (req, res) => {
     //     res.sendFile(path.join(__dirname, 'build2/index.html'));
@@ -59,6 +60,10 @@ if(process.env.NODE_ENV === 'production'){
 // });
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
+
+app.get('/admin/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../admin/build/index.html'));
 });
 
 
