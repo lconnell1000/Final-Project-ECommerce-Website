@@ -13,7 +13,11 @@ const stripeRoute = require("./routes/stripe");
 const cors = require('cors')
 
 
-mongoose.connect(process.env.MONGO_URL
+mongoose.connect(process.env.MONGO_URL,
+    {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      },
 ).then(() => console.log("DB connection successful!"))
 .catch((err) => {
 console.log(err);
@@ -41,19 +45,21 @@ if(process.env.NODE_ENV === 'production'){
 
     // todo: load client static
     // const clientStatic = path.join(__dirname, 'build');
-    app.use(express.static(path.join(__dirname, 'build')));
+    app.use(express.static(path.join(__dirname, '../client/build')));
 
-
+    // app.get('/admin', (req, res) => {
+    //     res.sendFile(path.join(__dirname, 'build2/index.html'));
+    // });
    
-    app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname, 'build/index.html'));
-    });
+    
     
 }
 // app.get('/admin', (req, res) => {
 //     res.sendFile(filepath)
 // });
-
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'));
+});
 
 
 app.listen(process.env.PORT || 5000, () => {
