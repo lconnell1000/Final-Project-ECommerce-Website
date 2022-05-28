@@ -21,7 +21,7 @@ function App() {
   const admin = useSelector((state) => state.user.currentUser?.isAdmin);
   
   return (
-    <Router>
+    <Router basename="/admin">
       <Switch>
         <Route path="/login">
           <Login />
