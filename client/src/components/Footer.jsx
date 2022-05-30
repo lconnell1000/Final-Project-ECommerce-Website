@@ -79,7 +79,7 @@ const Footer = () => {
     <Container>
         <Left>
             <Logo>AGAIN.</Logo>
-            <Description>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim quis reprehenderit facere laudantium aut. Sequi beatae quisquam aperiam et earum, odio quaerat, esse est cum corrupti culpa unde consectetur corporis.</Description>
+            <Description>Faced with overwhelm at the sheer volume of used clothing going to landfill textile artist Fiona Connell was inspired to create positive change. "Again" was created as a vehicle to upsycle thrifted clothing using botanical dyes from mother nature.</Description>
             <SocialContainer>
                 <SocialIcon color="3B5999">
                     <Facebook/>
