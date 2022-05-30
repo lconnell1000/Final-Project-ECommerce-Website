@@ -13,7 +13,7 @@ SO THAT I can generate income for my business
 
 ## Screenshot of the application once deployed
 The image below shows the homepage
-![ScreenShot](./Assets/Adminmain.png)
+![ScreenShot](./Assets/Homepage.png)
 
 The image below shows a page with a selected category
 ![ScreenShot](./Assets/Categorypage.png)
